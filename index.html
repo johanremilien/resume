@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Johan, Axel REMILIEN - Software Development Engineer [ Qt | C++ | QML ]</title>
-  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="icon" href="https://johanremilien.github.io/resume/logo.svg" type="image/svg+xml">
   <style>
     html, body, iframe {
       width: 100%;
@@ -17,5 +17,19 @@
 </head>
 <body>
   <iframe src="https://docs.google.com/gview?embedded=true&url=https://johanremilien.github.io/resume/RJA_SDE_RESUME.pdf" width="100%" height="100%" frameborder="0" title="Resume"></iframe>
+  <script>
+    window.addEventListener('load', () => {
+      // Ask the user if they want to download
+      const shouldDownload = confirm("Do you want to download my resume, right now?");
+      if (shouldDownload) {
+        const link = document.createElement("a");
+        link.href = "https://johanremilien.github.io/resume/RJA_SDE_RESUME.pdf";
+        link.download = "RJA_SDE_RESUME.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    });
+  </script>
 </body>
 </html>
